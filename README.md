@@ -85,7 +85,9 @@ You can use the following commands to run the demo without the installation of o
 Before run the demo, you need to:
 
 1.Move the demo_offline.py(top level folder) into the folder(./processor) to replace the previous demo_offline.py
+
 2.Download the [openpose pytorch repo](https://github.com/TreB1eN/Pytorch0.4.1_Openpose) into top level folder and replace the openpose.py with the openpose.py(top level folder)
+
 3.Remove the demo_offline.py and openpose.py(top level folder).
 
 The structure of the repo like this:
