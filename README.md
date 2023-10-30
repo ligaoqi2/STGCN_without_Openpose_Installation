@@ -1,4 +1,4 @@
-# ST-GCN
+# ST-GCN with demo
 
 ## Runnable Demo(Attention!!!)
 
