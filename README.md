@@ -4,6 +4,8 @@
 
 <!-- To visualize how ST-GCN exploit local correlation and local pattern, we compute the feature vector magnitude of each node in the final spatial temporal graph, and overlay them on the original video. **Openpose** should be ready for extracting human skeletons from videos. The skeleton based action recognition results is also shwon thereon. -->
 
+After config the conda environment
+
 You can use the following commands to run the demo without the installation of openpose but the code of openpose
 
 Before run the demo, you need to:
