@@ -1,5 +1,39 @@
 # ST-GCN
 
+## Runnable Demo(Attention!!!)
+
+<!-- To visualize how ST-GCN exploit local correlation and local pattern, we compute the feature vector magnitude of each node in the final spatial temporal graph, and overlay them on the original video. **Openpose** should be ready for extracting human skeletons from videos. The skeleton based action recognition results is also shwon thereon. -->
+
+You can use the following commands to run the demo without the installation of openpose but the code of openpose
+
+Before run the demo, you need to:
+
+1.Move the demo_offline.py(top level folder) into the folder(./processor) to replace the previous demo_offline.py
+
+2.Download the [openpose pytorch repo](https://github.com/TreB1eN/Pytorch0.4.1_Openpose) into top level folder and replace the openpose.py with the openpose.py(top level folder)
+
+3.Remove the demo_offline.py and openpose.py(top level folder).
+
+The structure of the repo like this:
+```
+|-- configs
+|-- feeder
+|-- models
+|-- net
+|-- processor
+    |-- demo_offline.py (have been replaced)
+    |-- ...
+|-- openpose(Download)
+    |-- openpose.py     (have been replaced)
+    |-- ...
+|-- ...
+```
+
+```shell
+# only with offline pose estimation
+python main.py demo_offline [--video ${PATH_TO_VIDEO}]
+```
+
 ## Introduction
 This repository holds the codebase, dataset and models for the paper:
 
@@ -75,40 +109,6 @@ bash tools/get_models.sh
 ```
 <!-- The downloaded models will be stored under ```./models```. -->
 You can also obtain models from [GoogleDrive](https://drive.google.com/drive/folders/1IYKoSrjeI3yYJ9bO0_z_eDo92i7ob_aF) or [BaiduYun](https://pan.baidu.com/s/1dwKG2TLvG-R1qeIiE4MjeA#list/path=%2FShare%2FAAAI18%2Fst-gcn%2Fmodels&parentPath=%2FShare), and manually put them into ```./models```.
-
-## Demo modify(Attention!!!)
-
-<!-- To visualize how ST-GCN exploit local correlation and local pattern, we compute the feature vector magnitude of each node in the final spatial temporal graph, and overlay them on the original video. **Openpose** should be ready for extracting human skeletons from videos. The skeleton based action recognition results is also shwon thereon. -->
-
-You can use the following commands to run the demo without the installation of openpose but the code of openpose
-
-Before run the demo, you need to:
-
-1.Move the demo_offline.py(top level folder) into the folder(./processor) to replace the previous demo_offline.py
-
-2.Download the [openpose pytorch repo](https://github.com/TreB1eN/Pytorch0.4.1_Openpose) into top level folder and replace the openpose.py with the openpose.py(top level folder)
-
-3.Remove the demo_offline.py and openpose.py(top level folder).
-
-The structure of the repo like this:
-```
-|-- configs
-|-- feeder
-|-- models
-|-- net
-|-- processor
-    |-- demo_offline.py (have been replaced)
-    |-- ...
-|-- openpose(Download)
-    |-- openpose.py     (have been replaced)
-    |-- ...
-|-- ...
-```
-
-```shell
-# only with offline pose estimation
-python main.py demo_offline [--video ${PATH_TO_VIDEO}]
-```
 
 Optional arguments:
 
